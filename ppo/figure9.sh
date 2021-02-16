@@ -1,0 +1,46 @@
+# command to reproduce Atari Pong experiments
+# LR search
+# Nero
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer nero --seed 0 --lr 0.0001
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer nero --seed 0 --lr 0.001
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer nero --seed 0 --lr 0.01
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer nero --seed 0 --lr 0.1
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer nero --seed 0 --lr 1.0
+
+# SGD 
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer sgd --seed 0 --lr 0.0001
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer sgd --seed 0 --lr 0.001
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer sgd --seed 0 --lr 0.01
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer sgd --seed 0 --lr 0.1
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer sgd --seed 0 --lr 1.0
+
+# Adam 
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer adam --seed 0 --lr 0.0001
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer adam --seed 0 --lr 0.001
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer adam --seed 0 --lr 0.01
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer adam --seed 0 --lr 0.1
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer adam --seed 0 --lr 1.0
+
+# LAMB
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer lamb --seed 0 --lr 0.0001
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer lamb --seed 0 --lr 0.001
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer lamb --seed 0 --lr 0.01
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer lamb --seed 0 --lr 0.1
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/lr --optimizer lamb --seed 0 --lr 1.0
+
+#Best lr repeats:
+# Nero
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer nero --seed 1 --lr 0.01
+env CUDA_VISIBLE_DEVICES=0 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer nero --seed 2 --lr 0.01
+
+# SGD
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer sgd --seed 1 --lr 0.1
+env CUDA_VISIBLE_DEVICES=1 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer sgd --seed 2 --lr 0.1
+
+# Adam
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer adam --seed 1 --lr 0.0001
+env CUDA_VISIBLE_DEVICES=2 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer adam --seed 2 --lr 0.0001
+
+# LAMB
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer lamb --seed 1 --lr 0.001
+env CUDA_VISIBLE_DEVICES=3 python main.py --env-name "PongNoFrameskip-v4" --algo ppo --use-gae --clip-param 0.1 --value-loss-coef 0.5 --num-processes 8 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.01  --num-env-steps 5000000 --log-dir pong_5M/ --optimizer lamb --seed 2 --lr 0.001
