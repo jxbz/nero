@@ -6,7 +6,7 @@ Nero optimiser
 
 This code is forked from the [Pytorch examples](https://github.com/pytorch/examples/tree/master/word_language_model) repository.
 
-Look inside `batch.sh` for the commands used in the paper.
+Look inside `figure7.sh` for the commands used in the paper.
 
 The `main.py` script accepts the following arguments:
 
