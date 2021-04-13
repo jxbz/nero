@@ -289,7 +289,7 @@ try:
                 torch.save(model, f)
             best_val_loss = val_loss
 
-        elif epoch == (args.epochs//(4.0/2.0)) : # decay lr halfway.
+        if epoch == (args.epochs//(4.0/2.0)) : # decay lr halfway.
             print("decaying the learning rate")
             if args.optim=='integermadam':
                 for param_group in optimizer.param_groups: param_group['lr_factor'] /= args.decayfactor
